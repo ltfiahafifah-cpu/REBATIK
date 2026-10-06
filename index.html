@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ReBatik — Recursive Batik Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+
+<header>
+  <h1>RE<span>BATIK</span></h1>
+</header>
+
+<section class="hero">
+  <small>RECURSIVE BATIK GENERATOR</small>
+  <h2>Create. Repeat. Transform.</h2>
+  <p>Eksplorasi pola batik melalui algoritma rekursif. Satu motif berkembang menjadi pola yang kompleks.</p>
+</section>
+
+<main>
+
+<div class="card">
+  <h3>01 — PILIH MOTIF</h3>
+
+  <div class="motifs">
+    <button class="motif active" data-m="Kawung">Kawung</button>
+    <button class="motif" data-m="Truntum">Truntum</button>
+    <button class="motif" data-m="Ceplok">Ceplok</button>
+    <button class="motif" data-m="Bunga">Bunga</button>
+    <button class="motif" data-m="Lereng">Lereng</button>
+  </div>
+
+  <h4>MOTIF TAMBAHAN</h4>
+
+  <div class="extra">
+    <label><input type="checkbox" value="Kawung"> Kawung
+      <input type="color" value="#7B6651"></label>
+
+    <label><input type="checkbox" value="Truntum"> Truntum
+      <input type="color" value="#71806A"></label>
+
+    <label><input type="checkbox" value="Ceplok"> Ceplok
+      <input type="color" value="#526579"></label>
+
+    <label><input type="checkbox" value="Bunga"> Bunga
+      <input type="color" value="#B66A4C"></label>
+
+    <label><input type="checkbox" value="Lereng"> Lereng
+      <input type="color" value="#8C6B55"></label>
+  </div>
+</div>
+
+<div class="card preview">
+
+  <div class="preview-head">
+    <div>
+      <small>02 — PREVIEW</small>
+      <h3 id="title">Kawung Pattern</h3>
+    </div>
+    <span id="status">● EMPTY</span>
+  </div>
+
+  <canvas id="canvas" width="760" height="520"></canvas>
+
+  <div class="stats">
+    <span>Motif <b id="sm">Kawung</b></span>
+    <span>Level <b id="sl">3</b></span>
+    <span>Pola <b id="sp">Cross</b></span>
+  </div>
+
+</div>
+
+<div class="card">
+
+  <h3>03 — KONTROL</h3>
+
+  <label>
+    Level Rekursi
+    <b class="value" id="levelVal">3</b>
+    <input id="level" type="range" min="1" max="5" value="3">
+  </label>
+
+  <label>
+    Ukuran Motif
+    <b class="value" id="sizeVal">55</b>
+    <input id="size" type="range" min="20" max="90" value="55">
+  </label>
+
+  <label>
+    Jarak
+    <b class="value" id="gapVal">1.15</b>
+    <input id="gap" type="range" min="1" max="2" step=".1" value="1.15">
+  </label>
+
+  <label>
+    Warna Utama
+    <input id="color" type="color" value="#526579">
+  </label>
+
+  <label>
+    Background
+    <input id="bg" type="color" value="#FFFDF8">
+  </label>
+
+  <h4>POLA</h4>
+
+  <div class="patterns">
+    <button class="pattern active" data-p="Cross">Cross</button>
+    <button class="pattern" data-p="Grid">Grid</button>
+    <button class="pattern" data-p="Diamond">Diamond</button>
+    <button class="pattern" data-p="Radial">Radial</button>
+    <button class="pattern" data-p="Hexagon">Hexagon</button>
+  </div>
+
+  <button class="generate" id="generate">
+    ✦ Generate Pattern
+  </button>
+
+  <div class="actions">
+    <button id="random">Randomize</button>
+    <button id="download">Download</button>
+    <button id="reset">Reset</button>
+  </div>
+
+</div>
+
+</main>
+
+<section class="concept">
+
+  <h3>KONSEP REKURSI</h3>
+
+  <div>
+    <b>01 — MOTIF AWAL</b>
+    <p>Program mulai dari satu motif dasar sebagai bentuk awal pola batik.</p>
+  </div>
+
+  <div>
+    <b>02 — PENGULANGAN</b>
+    <p>Motif yang sama dibuat kembali dengan ukuran yang lebih kecil.</p>
+  </div>
+
+  <div>
+    <b>03 — POLA TERBENTUK</b>
+    <p>Pengulangan terus dilakukan sampai terbentuk pola batik yang lebih kompleks.</p>
+  </div>
+
+</section>
+
+<footer>
+  REBATIK • Recursive Batik Generator
+</footer>
+
+</div>
+<script src="script.js"></script>
+</body>
+</html>
